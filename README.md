@@ -3,27 +3,36 @@ Credit Card Reward Point System - JavaScript Full Stack Application with Unit Te
 Tech Stack : MongoDB, Express.js, Angular & Node.js - MEAN Stack
 
 How to start / run application
+
 To Start Backend
 Go to backend folder in Command Prompt (CMD)
 Run command "npm i" to install all dependencies
 Run command "nodemon app.js" to start the backend application server
 Backend server will start running on Port 3000 => http://localhost:3000/
+
 To Start Frontend
 Go to frontend folder in Command Prompt (CMD)
 Run command "npm i" to install all dependencies
 Run command "ng serve --open" to start the frontend application
 Browser will open and frontend application will start running on Port 4200 => http://localhost:4200/
 Unit Testing
+
 Backend
+
 To check code coverage of unit testing => Run command "npm run coverage"
 To open code coverage report => Go to path "/backend/coverage/lcov-report" & open "index.html" file
+
 Frontend
+
 To check code coverage of unit testing => Run command "ng test --code-coverage"
 To open code coverage report => Go to path "frontend/coverage/frontend" & open "index.html" file
+
 End to End Testing
+
 Go to "frontend" folder and run command "ng e2e" => Cypress Window will open which will have different testcase - click on it to run
 
 Softwares / Tools required :
+
 MongoDB shell version: 5.0.6
 Express version: 4.17.2
 Angular CLI version: 13.2.1
@@ -31,10 +40,13 @@ Node version: 16.13.0
 Node Package Manager (npm) version: 8.4.0
 Testing & Code Coverage: Jasmine, Karma, Nyc(Istanbul), Supertest
 End to End Testing: Cypress
+
 Architecture
-image
+![im](https://user-images.githubusercontent.com/34164643/174134681-b2f97c35-679c-4714-a3c4-c8677cf9b912.png)
+
 
 Details about the project
+
 The Problem Statement : The aim is to create a rewards calculation system that calculates the total monthly reward points earned based on a customer's credit card purchases. More than one reward points calculation rules could apply to a merchant’s transaction(s) and the system should maximize the calculated points for a merchant by considering different priorities or combinations of the rules.
 
 Sample Transactions : Here is a list of transactions for a customer that needs to be considered for your solution.
@@ -51,6 +63,7 @@ transactions = {
   "T09": {"date": "2021-05-09", "merchant_code" : "sportcheck", "amount_cents": 7326},
   "T10": {"date": "2021-05-10", "merchant_code" : "tim_hortons", "amount_cents": 1321}
 }
+
 The Ask : Assuming that each $1 spend is only counted once, implement a method that takes the customer transactions as an input (Merchant Code -> Purchase Amount) and calculates the total maximum rewards points earned for the month , the maximum reward points applied for each transaction.
 
 Rules :
@@ -62,7 +75,9 @@ Rules :
 ● Rule 5: 75 points for every $25 spend at Sport Check and $10 spend at Tim Hortons
 ● Rule 6: 75 point for every $20 spend at Sport Check
 ● Rule 7: 1 points for every $1 spend for all other purchases (including leftover amount)
+
 Examples
+
 Here are a few examples to help understand how to use rules to calculate the reward points. Each example has a set of transactions and rules to use for reward points calculation. These examples may not necessarily be the solution to the main problem.
 
 Example 1
